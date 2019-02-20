@@ -750,7 +750,7 @@
  * via IP_FRAG.
  */
 #if !defined IP_REASSEMBLY || defined __DOXYGEN__
-#define IP_REASSEMBLY                   LWIP_FEATURES // 1
+#define IP_REASSEMBLY                   1//LWIP_FEATURES // 1
 #endif
 
 /**
@@ -759,7 +759,7 @@
  * controlled via IP_REASSEMBLY.
  */
 #if !defined IP_FRAG || defined __DOXYGEN__
-#define IP_FRAG                         LWIP_FEATURES // 1
+#define IP_FRAG                         1//LWIP_FEATURES // 1
 #endif
 
 #if !LWIP_IPV4
@@ -787,7 +787,7 @@
  * in this time, the whole packet is discarded.
  */
 #if !defined IP_REASS_MAXAGE || defined __DOXYGEN__
-#define IP_REASS_MAXAGE                 15
+#define IP_REASS_MAXAGE                 1
 #endif
 
 /**
@@ -1266,14 +1266,14 @@
  * Define to 0 if your device is low on memory.
  */
 #if !defined TCP_QUEUE_OOSEQ || defined __DOXYGEN__
-#define TCP_QUEUE_OOSEQ                 LWIP_TCP_SACK_OUT // LWIP_TCP
+#define TCP_QUEUE_OOSEQ                 1//LWIP_TCP_SACK_OUT // LWIP_TCP
 #endif
 
 /**
  * LWIP_TCP_SACK_OUT==1: TCP will support sending selective acknowledgements (SACKs).
  */
 #if !defined LWIP_TCP_SACK_OUT || defined __DOXYGEN__
-#define LWIP_TCP_SACK_OUT               LWIP_FEATURES
+#define LWIP_TCP_SACK_OUT               1//LWIP_FEATURES
 #endif
 
 /**
@@ -1287,7 +1287,7 @@
  * The amount of memory used to store SACK ranges is LWIP_TCP_MAX_SACK_NUM * 8 bytes for each TCP PCB.
  */
 #if !defined LWIP_TCP_MAX_SACK_NUM || defined __DOXYGEN__
-#define LWIP_TCP_MAX_SACK_NUM           2 // 4
+#define LWIP_TCP_MAX_SACK_NUM           10
 #endif
 
 /**
